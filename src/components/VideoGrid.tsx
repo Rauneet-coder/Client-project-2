@@ -56,16 +56,13 @@ function VideoCard({ video }: { video: YouTubeVideo }) {
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <iframe
             key={video.id}
-            src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&mute=0&controls=0&modestbranding=1&playsinline=1&iv_load_policy=3&rel=0&showinfo=0`}
+            src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&mute=0&controls=0&modestbranding=1&playsinline=1&iv_load_policy=3&rel=0`}
             allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
             onLoad={handleIframeLoad}
             onError={() => setHasError(true)}
             className="absolute inset-0 w-full h-full border-none scale-[1.02]"
           />
-          {/* Overlay strips to hide YouTube branding (title top, logo bottom-right) */}
-          <div className="absolute top-0 left-0 right-0 h-10 bg-black" />
-          <div className="absolute bottom-0 right-0 w-32 h-8 bg-black" />
         </div>
       )}
 
