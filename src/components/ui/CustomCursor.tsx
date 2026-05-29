@@ -78,7 +78,7 @@ export function CustomCursor() {
       {/* Dot */}
       <div
         ref={dotRef}
-        className="pointer-events-none fixed z-[9999] h-3 w-3 rounded-full bg-accent transition-transform duration-150"
+        className="pointer-events-none fixed z-[9999] h-3 w-3 rounded-full bg-purple-500 transition-transform duration-150"
         style={{
           transform: "translate(-100px,-100px)",
           mixBlendMode: "multiply",
@@ -88,7 +88,7 @@ export function CustomCursor() {
       {/* Ring */}
       <motion.div
         ref={ringRef}
-        className="pointer-events-none fixed z-[9998] h-8 w-8 rounded-full border border-accent"
+        className="pointer-events-none fixed z-[9998] h-8 w-8 rounded-full border border-purple-500"
         style={{ transform: "translate(-100px,-100px)" }}
         animate={{
           scale: isHovering ? 1.6 : 1,
